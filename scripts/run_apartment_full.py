@@ -7,7 +7,10 @@ import os
 import time
 import pandas
 
-def get_data_from_csv(csv_path: str, data_structure: Dict[str, Dict[str, Any]]) -> Tuple[List[float], Dict[str, Dict[str, List[List[float]]]]]:
+
+def get_data_from_csv(
+    csv_path: str, data_structure: Dict[str, Dict[str, Any]]
+) -> Tuple[List[float], Dict[str, Dict[str, List[List[float]]]]]:
     df = pandas.read_csv(csv_path)
     time_stamp = df["time"].tolist()
     data: Dict[str, Dict[str, List[List[float]]]] = {}
@@ -15,17 +18,21 @@ def get_data_from_csv(csv_path: str, data_structure: Dict[str, Dict[str, Any]]) 
     for obj_name, values in data_structure.items():
         data[obj_name] = {}
         for attribute_name in values.keys():
-            keys = [f"{obj_name}:{attribute_name}_{i}" for i in range(len(values[attribute_name]))]
+            keys = [
+                f"{obj_name}:{attribute_name}_{i}"
+                for i in range(len(values[attribute_name]))
+            ]
             if all(key in df.columns for key in keys):
                 data[obj_name][attribute_name] = df[keys].values.tolist()
 
     return time_stamp, data
 
+
 if __name__ == "__main__":
     scene_path = os.path.join(
         os.path.dirname(__file__), "..", "assets", "apartment_full.xml"
     )
-    csv_path = "/media/giangnguyen/Storage/semantic_digital_twin_demo/multiverse/data.csv"
+    csv_path = os.path.join(os.path.dirname(__file__), "..", "multiverse", "data.csv")
     write_objects = {
         "LeftHand_WristRoot": {
             "position": [1.5, 2.6, 1],
@@ -74,7 +81,7 @@ if __name__ == "__main__":
         "RightHand_PinkyTip": {
             "position": [1.6565, 2.4, 0.967],
             "quaternion": [1.0, 0.0, 0.0, 0.0],
-        }
+        },
     }
     image_dir = os.path.join(os.path.dirname(__file__), "..", "images")
     world = MJCFParser(scene_path).parse()
@@ -89,11 +96,11 @@ if __name__ == "__main__":
         viewer=viewer,
         headless=headless,
         step_size=5e-3,
-        integrator="IMPLICITFAST",
+        integrator="RK4",
         cone="ELLIPTIC",
         impratio="10",
         multiccd=True,
-        energy=False
+        energy=False,
     )
     multi_sim.start_simulation()
 
@@ -108,7 +115,10 @@ if __name__ == "__main__":
         while current_idx < len(time_stamp) - 1:
             last_time = current_time
             current_time = time.time() - start_time
-            while current_idx < len(time_stamp) - 1 and time_stamp[current_idx] < current_time:
+            while (
+                current_idx < len(time_stamp) - 1
+                and time_stamp[current_idx] < current_time
+            ):
                 current_idx += 1
             for obj_name, values in data.items():
                 for value_name, value_list in values.items():
