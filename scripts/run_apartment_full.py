@@ -112,14 +112,15 @@ if __name__ == "__main__":
     current_time = time.time() - start_time
     current_idx = 0
     try:
-        while current_idx < len(time_stamp) - 1:
+        while current_idx < len(time_stamp):
             last_time = current_time
             current_time = time.time() - start_time
             while (
-                current_idx < len(time_stamp) - 1
-                and time_stamp[current_idx] < current_time
+                current_idx < len(time_stamp) and time_stamp[current_idx] < current_time
             ):
                 current_idx += 1
+            if current_idx >= len(time_stamp) - 1:
+                break
             for obj_name, values in data.items():
                 for value_name, value_list in values.items():
                     write_objects[obj_name][value_name][:] = value_list[current_idx]
