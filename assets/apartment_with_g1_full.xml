@@ -1,0 +1,32 @@
+<mujoco model="apartment">
+
+  <include file="apartment_no_visual.xml"/>
+
+  <include file="milk_box.xml"/>
+
+  <include file="bowl.xml"/>
+
+  <include file="g1.xml"/>
+
+  <option timestep="0.005" integrator="implicitfast">
+    <flag multiccd="enable" />
+  </option>
+
+  <!-- <keyframe>
+    <key name="home" qpos="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.4 2.8 1.04 1 0 0 0 2.4 2.5 0.97 1 0 0 0 1.5 2.6 1 0.707107 0 0.707107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 2.4 1 0 0.707107 0 0.707107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+  </keyframe> -->
+
+  <extension>
+    <plugin plugin="mujoco.multiverse_connector">
+      <instance name="mujoco_client">
+        <config key="host" value="tcp://127.0.0.1" />
+        <config key="server_port" value="7000" />
+        <config key="client_port" value="7501" />
+        <config key="world_name" value="world" />
+        <config key="simulation_name" value="mujoco_sim" />
+        <config key="send" value="{'body': ['position', 'quaternion'], 'joint': ['joint_angular_position']}" />
+        <config key="receive" value="{'PlayerPawn': ['position', 'quaternion'], 'LeftHand_WristRoot': ['position', 'quaternion'], 'LeftHand_ThumbTip': ['position', 'quaternion'], 'LeftHand_IndexTip': ['position', 'quaternion'], 'LeftHand_MiddleTip': ['position', 'quaternion'], 'LeftHand_RingTip': ['position', 'quaternion'], 'LeftHand_PinkyTip': ['position', 'quaternion'], 'RightHand_WristRoot': ['position', 'quaternion'], 'RightHand_ThumbTip': ['position', 'quaternion'], 'RightHand_IndexTip': ['position', 'quaternion'], 'RightHand_MiddleTip': ['position', 'quaternion'], 'RightHand_RingTip': ['position', 'quaternion'], 'RightHand_PinkyTip': ['position', 'quaternion']}" />
+      </instance>
+    </plugin>
+  </extension>
+</mujoco>
