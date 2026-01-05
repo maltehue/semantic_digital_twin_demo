@@ -1,17 +1,12 @@
 from typing import Dict, Any, List, Tuple
 
 from semantic_digital_twin.adapters.mjcf import MJCFParser
-from multiverse_simulator import (
-    MultiverseViewer,
-    MultiverseSimulatorState,
-    MultiverseCallbackResult,
-)
+from multiverse_simulator import MultiverseViewer, MultiverseSimulatorState, MultiverseCallbackResult
 from semantic_digital_twin.adapters.multi_sim import MujocoSim
 import os
 import time
 import pandas
 from threading import Thread
-
 
 def get_data_from_csv(
     csv_path: str, data_structure: Dict[str, Dict[str, Any]]
@@ -32,39 +27,24 @@ def get_data_from_csv(
 
     return time_stamp, data
 
-
-def get_contact_data(mujoco_sim: MujocoSim, N_tries=100):
+def get_contact_data(mujoco_sim: MujocoSim, N_tries = 100):
     while mujoco_sim.simulator.state == MultiverseSimulatorState.RUNNING:
-        left_hand_contact_bodies = mujoco_sim.simulator.get_contact_bodies(
-            body_name="lh_palm", including_children=True
-        )
-        right_hand_contact_bodies = mujoco_sim.simulator.get_contact_bodies(
-            body_name="rh_palm", including_children=True
-        )
-        assert (
-            left_hand_contact_bodies.type
-            == MultiverseCallbackResult.ResultType.SUCCESS_WITHOUT_EXECUTION
-        ), "Failed to get left hand contact bodies"
-        assert (
-            right_hand_contact_bodies.type
-            == MultiverseCallbackResult.ResultType.SUCCESS_WITHOUT_EXECUTION
-        ), "Failed to get right hand contact bodies"
-        contact_bodies = left_hand_contact_bodies.result.union(
-            right_hand_contact_bodies.result
-        )
+        left_hand_contact_bodies = mujoco_sim.simulator.get_contact_bodies(body_name="lh_palm", including_children=True)
+        right_hand_contact_bodies = mujoco_sim.simulator.get_contact_bodies(body_name="rh_palm", including_children=True)
+        assert left_hand_contact_bodies.type == MultiverseCallbackResult.ResultType.SUCCESS_WITHOUT_EXECUTION, \
+            "Failed to get left hand contact bodies"
+        assert right_hand_contact_bodies.type == MultiverseCallbackResult.ResultType.SUCCESS_WITHOUT_EXECUTION, \
+            "Failed to get right hand contact bodies"
+        contact_bodies = left_hand_contact_bodies.result.union(right_hand_contact_bodies.result)
         if len(left_hand_contact_bodies.result) > 0:
             print(f"Left hand has contact with:", left_hand_contact_bodies.result)
         if len(right_hand_contact_bodies.result) > 0:
             print(f"Right hand has contact with:", right_hand_contact_bodies.result)
         for contact_body in contact_bodies:
             for _ in range(N_tries):
-                contact_with = mujoco_sim.simulator.get_contact_bodies(
-                    body_name=contact_body, including_children=True
-                )
-                assert (
-                    contact_with.type
-                    == MultiverseCallbackResult.ResultType.SUCCESS_WITHOUT_EXECUTION
-                ), f"Failed to get contact bodies for {contact_body}"
+                contact_with = mujoco_sim.simulator.get_contact_bodies(body_name=contact_body, including_children=True)
+                assert contact_with.type == MultiverseCallbackResult.ResultType.SUCCESS_WITHOUT_EXECUTION, \
+                    f"Failed to get contact bodies for {contact_body}"
                 if len(contact_with.result) > 0:
                     print(f"  {contact_body} is in contact with:", contact_with.result)
                     break
@@ -72,19 +52,13 @@ def get_contact_data(mujoco_sim: MujocoSim, N_tries=100):
                 print(f"  {contact_body} contact bodies could not be determined.")
         time.sleep(0.1)
 
-
 def get_data(mujoco_sim: MujocoSim):
     while mujoco_sim.simulator.state == MultiverseSimulatorState.RUNNING:
-        cabinet10_drawer1_joint_pos = mujoco_sim.simulator.get_joint_value(
-            "cabinet10_drawer1_joint"
-        ).result
+        cabinet10_drawer1_joint_pos = mujoco_sim.simulator.get_joint_value("cabinet10_drawer1_joint").result
         milk_box_pos = mujoco_sim.simulator.get_body_position("milk_box").result
         bowl_pos = mujoco_sim.simulator.get_body_position("bowl").result
-        print(
-            f"cabinet10_drawer1_joint_pos: {cabinet10_drawer1_joint_pos}, milk_box_pos: {milk_box_pos}, bowl_pos: {bowl_pos}"
-        )
+        print(f"cabinet10_drawer1_joint_pos: {cabinet10_drawer1_joint_pos}, milk_box_pos: {milk_box_pos}, bowl_pos: {bowl_pos}")
         time.sleep(0.1)
-
 
 if __name__ == "__main__":
     scene_path = os.path.join(
