@@ -70,7 +70,7 @@ if __name__ == "__main__":
         world=world,
         viewer=viewer,
         headless=headless,
-        step_size=5e-3,
+        step_size=0.01,
         integrator="IMPLICITFAST",
         multiverse_params=multiverse_params,
     )
