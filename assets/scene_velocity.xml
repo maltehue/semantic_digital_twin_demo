@@ -1,6 +1,6 @@
-<mujoco model="tiago velocity scene">
+<mujoco model="tiago dual velocity scene">
 
-  <include file="tiago_velocity.xml"/>
+  <include file="tiago_dual_velocity.xml"/>
 
   <visual>
     <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>

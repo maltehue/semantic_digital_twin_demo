@@ -1,0 +1,7 @@
+<mujoco model="apartment">
+
+  <include file="apartment.xml"/>
+
+  <include file="scene_velocity.xml"/>
+
+</mujoco>
