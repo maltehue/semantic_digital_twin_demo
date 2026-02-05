@@ -47,7 +47,7 @@
       <joint frictionloss="1"/>
     </default>
     <default class="wheel">
-      <geom condim="6"/>
+      <geom contype="0" conaffinity="0"/>
     </default>
   </default>
 
@@ -55,6 +55,7 @@
     <body name="base_link">
       <freejoint/>
       <inertial pos="-0.00511 -0.00037 0.13715" mass="59.53854" diaginertia="2.326 2.585 3.471"/>
+      <geom pos="0 0 0.15" type="box" size="0.38 0.25 0.15" rgba="0 0 1 .3" condim="1" friction="0 0 0" group="3"/>
       <geom pos="0 0 0.0762" material="gray75" mesh="base_link"/>
       <geom pos="-0.27512 0.18297 0.20864" quat="0 -0.382683 -0.92388 0" material="gray10" mesh="sick_tim551"/>
       <geom pos="0.27512 -0.18297 0.20864" quat="0 -0.92388 0.382683 0" material="gray10" mesh="sick_tim551"/>

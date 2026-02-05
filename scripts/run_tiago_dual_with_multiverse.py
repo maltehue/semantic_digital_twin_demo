@@ -82,7 +82,7 @@ if __name__ == "__main__":
         world=world,
         viewer=viewer,
         headless=headless,
-        step_size=0.002,
+        step_size=0.01,
         integrator="IMPLICITFAST",
         cone="PYRAMIDAL",
         multiverse_params=multiverse_params,
@@ -95,7 +95,7 @@ if __name__ == "__main__":
     print("Everything is ready")
 
     try:
-        for i in range(60):
+        for i in range(600):
             # capture_rgb = multi_sim.simulator.capture_rgb(camera_name="head_camera")
             # rgb = capture_rgb.result
             # # Save as png
