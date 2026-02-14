@@ -94,14 +94,4 @@ if __name__ == "__main__":
     viewer.write_objects = {}
     print("Everything is ready")
 
-    try:
-        for i in range(600):
-            # capture_rgb = multi_sim.simulator.capture_rgb(camera_name="head_camera")
-            # rgb = capture_rgb.result
-            # # Save as png
-            # cv2.imwrite(os.path.join(image_dir, f"rgb_{i}.png"), cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR))
-            time.sleep(1)
-    except KeyboardInterrupt:
-        print("Stop simulation!")
-    finally:
-        multi_sim.stop_simulation()
+
