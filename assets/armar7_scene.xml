@@ -20,5 +20,20 @@
       <light pos="0 0 1.5" dir="0 0 -1" directional="true"/>
       <geom name="floor" size="0 0 0.05" type="plane" material="groundplane"/>
     </worldbody>
+
+<extension>
+        <plugin plugin="mujoco.multiverse_connector">
+                <instance name="mujoco_client">
+                        <config key="host" value="tcp://127.0.0.1" />
+                        <config key="server_port" value="7000" />
+                        <config key="client_port" value="7500" />
+                        <config key="world_name" value="world" />
+                        <config key="simulation_name" value="scene_simulation" />
+                        <config key="send" value="{'body': ['position', 'quaternion'], 'joint': ['joint_angular_position', 'joint_linear_position', 'joint_angular_velocity', 'joint_linear_velocity', 'joint_force', 'joint_torque']}" />
+                        <config key="receive" value="{'ArmR1_Cla1_actuator': ['cmd_joint_angular_position'], 'ArmR2_Sho1_actuator': ['cmd_joint_angular_position'], 'ArmR3_Sho2_actuator': ['cmd_joint_angular_position'], 'ArmR4_Sho3_actuator': ['cmd_joint_angular_position'], 'ArmR5_Elb1_actuator': ['cmd_joint_angular_position'], 'ArmR6_Elb2_actuator': ['cmd_joint_angular_position'], 'ArmR7_Wri1_actuator': ['cmd_joint_angular_position'],'ArmR7_Wri2_actuator': ['cmd_joint_angular_position']}" />
+                </instance>
+        </plugin>
+</extension>
+
 </mujoco>
   
