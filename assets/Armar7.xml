@@ -59,90 +59,90 @@
       </default>
 
       <!-- Joints -->
-      <default class="Platform_joint">
-        <default class="Platform_xy_joint">
+      <default class="Platform">
+        <default class="Platform_xy">
           <joint type="slide" limited="false"/>
         </default>
-        <default class="Platform_yaw_joint">
+        <default class="Platform_yaw">
           <joint type="hinge" limited="true" range="-3.14159 3.14159"/>
         </default>
       </default>
 
-      <default class="Ankle_joint">
+      <default class="Ankle">
         <joint type="hinge" axis="0 0 1" limited="true" range="-1.0088 0"/>
       </default>
-      <default class="Knee_joint">
+      <default class="Knee">
         <joint type="hinge" axis="0 0 1" limited="true" range="0 1.745329"/>
       </default>
-      <default class="Hip_joint">
+      <default class="Hip">
         <joint type="hinge" axis="0 0 -1" limited="true" range="0 2.18166"/>
       </default>
       
-      <default class="Arm_joint">
-        <default class="Cla1_joint">
+      <default class="Arm">
+        <default class="Cla1">
           <joint type="hinge" axis="0 0 1" limited="true" range="-1.41372 1.41372"/>
         </default>
-        <default class="Sho1_joint">
+        <default class="Sho1">
           <joint type="hinge" axis="0 0 1" limited="true" range="-3.14 3.14"/>
         </default>
-        <default class="Sho2_joint">
+        <default class="Sho2">
           <joint type="hinge" axis="0 0 1" limited="true" range="-0.349066 3.24631"/>
         </default>
-        <default class="Sho3_joint">
+        <default class="Sho3">
           <joint type="hinge" axis="0 0 1" limited="false" range="-3.14 3.14"/>
         </default>
-        <default class="Elb1_joint">
+        <default class="Elb1">
           <joint type="hinge" axis="0 0 1" limited="true" range="0 2.37365"/>
         </default>
-        <default class="Elb2_joint">
+        <default class="Elb2">
           <joint type="hinge" axis="0 0 1" limited="false"/>
         </default>
       </default>
 
-      <default class="Wrist_joint">
-        <default class="Wrist1_joint">
+      <default class="Wrist">
+        <default class="Wrist1">
           <joint type="hinge" axis="1 0 0" limited="true" range="-1.5708 1.5708"/>
         </default>
-        <default class="Wrist2_joint">
+        <default class="Wrist2">
           <joint type="hinge" axis="0 1 0" limited="true" range="-1.5708 1.5708"/>
         </default>
       </default>
 
-      <default class="Hand_joint">
+      <default class="Hand">
         <joint type="hinge" axis="1 0 0" limited="true" range="0 1.5708" stiffness="0.1" damping="0.01"/>
-        <default class="Thumb1_joint"> 
+        <default class="Thumb1"> 
         </default>
-        <default class="Thumb2_joint"> 
+        <default class="Thumb2"> 
         </default>
-        <default class="Thumb3_joint"> 
+        <default class="Thumb3"> 
         </default>
-        <default class="Index1_joint">
+        <default class="Index1">
         </default>
-        <default class="Index2_joint">
+        <default class="Index2">
         </default>
-        <default class="Middle1_joint"> 
+        <default class="Middle1"> 
         </default>
-        <default class="Middle2_joint">
+        <default class="Middle2">
         </default>
-        <default class="Ring1_joint">
+        <default class="Ring1">
           <joint stiffness="0.01" damping="0"/>
         </default>
-        <default class="Ring2_joint">
+        <default class="Ring2">
           <joint stiffness="0" damping="0"/>
         </default>
-        <default class="Pinky1_joint">
+        <default class="Pinky1">
           <joint stiffness="0" damping="0"/>
         </default>
-        <default class="Pinky2_joint">
+        <default class="Pinky2">
           <joint stiffness="0" damping="0"/>
         </default>
       </default>
 
-      <default class="Neck_joint">
-        <default class="Neck_yaw_joint">
+      <default class="Neck">
+        <default class="Neck_yaw">
           <joint type="hinge" axis="0 0 1" limited="true" range="-2.092929026 2.092929026"/>
         </default>
-        <default class="Neck_pitch_joint">
+        <default class="Neck_pitch">
           <joint type="hinge" axis="0 0 1" limited="true" range="-0.658216021 0.658216021"/>
         </default>
       </default>
@@ -153,9 +153,9 @@
   <worldbody>
     <body name="Platform_link" pos="0 0 0" quat="1 0 0 0" childclass="Armar7">
       <inertial pos="-0.0173717 0.15082 -0.0036366" mass="131.746" fullinertia="5.93318 7.99928 6.15192 0.0925544 -0.171718 0.0469724"/>
-      <joint name="Platform_x_joint" axis="1 0 0" class="Platform_xy_joint"/>
-      <joint name="Platform_y_joint" axis="0 1 0" class="Platform_xy_joint"/>
-      <joint name="Platform_yaw_joint" axis="0 0 1" class="Platform_yaw_joint"/>
+      <joint name="Platform_x" axis="1 0 0" class="Platform_xy"/>
+      <joint name="Platform_y" axis="0 1 0" class="Platform_xy"/>
+      <joint name="Platform_yaw" axis="0 0 1" class="Platform_yaw"/>
 
       <!-- <geom mesh="platform" pos="0 0 0" quat="0.353553 0.353553 0.612372 0.612372" class="collision" /> -->
       <geom mesh="platform_1" pos="0 0 0" quat="0.353553 0.353553 0.612372 0.612372" material="platform_1"/>
@@ -182,11 +182,11 @@
       <body name="Ankle_link" pos="0 0 0.31" quat="0 0.707107 0 0.707107">
         <geom quat="0.5 0.5 0.5 -0.5" material="ankle" mesh="ankle"/>
         <body name="Lower_legs_link" pos="0.05 0 0" quat="1 0 0 0">
-          <joint name="Ankle_joint" class="Ankle_joint"/>
+          <joint name="Ankle" class="Ankle"/>
           <inertial pos="-0.00510651 0.213053 -0.0051806" mass="7.4199" fullinertia="0.103337 0.0485436 0.0729877 -0.00223745 0.00323384 0.00588342"/>
           <geom quat="0.707107 0 0 -0.707107" material="body_lower_leg" mesh="body_lower_leg"/>
           <body name="Legs_link" pos="0.28 0 0" quat="1 0 0 0">
-            <joint name="Knee_joint" class="Knee_joint"/>
+            <joint name="Knee" class="Knee"/>
             <inertial pos="0.00520461 0.205866 -0.00822409" mass="7.3232" fullinertia="0.131666 0.059659 0.0904037 0.00368176 -9.00074e-05 0.00307771"/>
             <geom quat="0.707107 0 0 -0.707107" material="thigh" mesh="thigh"/>
             <body name="Torso_link" pos="0.2829 0 0" quat="1 0 0 0">
@@ -198,7 +198,7 @@
               <geom quat="0.707107 0 0 -0.707107" mesh="body_shoulder_2" material="body_shoulder_2"/>
               <geom quat="0.707107 0 0 -0.707107" mesh="body_shoulder_3" material="body_shoulder_3"/>
               <geom quat="0.707107 0 0 -0.707107" mesh="body_shoulder_4" material="body_shoulder_4"/>
-              <joint name="Hip_joint" class="Hip_joint"/>
+              <joint name="Hip" class="Hip"/>
               <body name="CenterArms_link" pos="0.51314 0 0" quat="0 0.707107 0 0.707107">
                 <!-- <geom mesh="armanbindung" class="collision"/> -->
                 <geom mesh="armanbindung_0" material="armanbindung_0"/>
@@ -214,9 +214,9 @@
                     <geom material="neck_yaw" mesh="neck_yaw"/>
                     <!-- I shifted the mesh to better align visually. TODO: Is there an error with the `Neck_pitch_link` transformation? -->
                     <!-- <geom pos="-0.0055 0 0.095" quat="0.707107 0 -0.707107 0" material="neck_pitch" mesh="neck_pitch"/> -->
-                    <joint name="Neck_yaw_joint" class="Neck_yaw_joint"/>
+                    <joint name="Neck_yaw" class="Neck_yaw"/>
                     <body name="Neck_pitch_link" pos="0 0 0.1009" quat="0.707107 0 -0.707107 0">
-                      <joint name="Neck_pitch_joint" class="Neck_pitch_joint"/>
+                      <joint name="Neck_pitch" class="Neck_pitch"/>
                       <geom material="neck_pitch" mesh="neck_pitch"/>
                       <body name="Head_link" pos="0 0 0" quat="1 0 0 0">
                         <!-- <geom mesh="head" material="head"/> -->
@@ -232,28 +232,28 @@
                   </body>
                 </body>
                 <body name="ArmL1_Cla1_link" pos="-0.0585 0 0" quat="0.707107 0 0 -0.707107">
-                  <joint name="ArmL1_Cla1_joint" class="Cla1_joint"/>
+                  <joint name="ArmL1_Cla1" class="Cla1"/>
                   <inertial pos="-5.6346e-06 -0.0387424 0.000277335" mass="1.76582" fullinertia="0.0040529 0.00302597 0.00356974 -5.65332e-06 -2.16909e-06 -4.84261e-05"/>
                   <geom pos="2.91038e-14 0 0" quat="1 0 0 0" material="cla1_sho1_exo" mesh="cla1_sho1_exo"/>
                   <body name="ArmL2_Sho1_link" pos="2.91038e-14 0 0" quat="0.707107 0.707107 0 0">
-                    <joint name="ArmL2_Sho1_joint" class="Sho1_joint"/>
+                    <joint name="ArmL2_Sho1" class="Sho1"/>
                     <inertial pos="0.00990412 -0.000455043 0.0575877" mass="1.65112" fullinertia="0.00270724 0.00375814 0.00327077 -1.09109e-06 0.000166031 -5.3142e-05"/>
                     <geom pos="0 0 0.088" quat="1 0 0 0" material="sho1_sho2_exo" mesh="sho1_sho2_exo"/>
                     <body name="ArmL3_Sho2_link" pos="2.91038e-14 0 0.156" quat="-0.5 -0.5 0.5 0.5">
-                      <joint name="ArmL3_Sho2_joint" class="Sho2_joint"/>
+                      <joint name="ArmL3_Sho2" class="Sho2"/>
                       <inertial pos="0.111256 -0.00115776 -0.00191682" mass="2.58682" fullinertia="0.00688435 0.0137648 0.0109076 -0.000103523 -0.000658886 -4.66134e-06"/>
                       <!-- <geom type="mesh" mesh="arm_sho2_ex" class="collision"/> -->
                       <geom mesh="arm_sho2_ex_0" material="arm_sho2_ex_0"/>
                       <geom mesh="arm_sho2_ex_1" material="arm_sho2_ex_1"/>
                       <body name="ArmL4_Sho3_link" pos="0 0 0" quat="0.5 0.5 0.5 0.5">
-                        <joint name="ArmL4_Sho3_joint" class="Sho3_joint"/>
+                        <joint name="ArmL4_Sho3" class="Sho3"/>
                         <inertial pos="-0.0138163 -0.0283729 0.145717" mass="3.56155" fullinertia="0.0110909 0.0110237 0.00417336 0.00045749 -0.000904647 0.00204263"/>
                         <!-- <geom type="mesh" pos="0 0 0.185" quat="0 0 0 1" mesh="left_arm_sho3" class="collision"/> -->
                         <geom pos="0 0 0.185" quat="0 0 0 1" mesh="left_arm_sho3_0" material="left_arm_sho3_0"/>
                         <geom pos="0 0 0.185" quat="0 0 0 1" mesh="left_arm_sho3_1" material="left_arm_sho3_1"/>
                         <geom pos="0 0 0.185" quat="0 0 0 1" mesh="left_arm_sho3_2" material="left_arm_sho3_2"/>
                         <body name="ArmL5_Elb_link" pos="0 0.025 0.3516" quat="-0.5 -0.5 0.5 0.5">
-                          <joint name="ArmL5_Elb1_joint" class="Elb1_joint"/>
+                          <joint name="ArmL5_Elb1" class="Elb1"/>
                           <inertial pos="-0.00506851 0.0385547 0.00232336" mass="0.537487" fullinertia="0.00152013 0.00138165 0.000803862 -4.56548e-05 2.3935e-06 4.46932e-05"/>
                           <!-- <geom type="mesh" pos="1.90735e-09 0 -0.01" quat="1 0 0 0" mesh="elbow1_left" class="collision"/> -->
                           <geom pos="1.90735e-09 0 -0.01" quat="1 0 0 0" mesh="elbow1_left_0" material="elbow1_left_0"/>
@@ -261,14 +261,14 @@
                           <geom pos="1.90735e-09 0 -0.01" quat="1 0 0 0" mesh="elbow1_left_2" material="elbow1_left_2"/>
                           <geom pos="1.90735e-09 0 -0.01" quat="1 0 0 0" mesh="elbow1_left_3" material="elbow1_left_3"/>
                           <body name="ArmL6_Elb2_link" pos="1.90735e-09 0 -0.01" quat="0.707107 -0.707107 4.92009e-15 -4.81587e-15">
-                            <joint name="ArmL6_Elb2_joint" class="Elb2_joint"/>
+                            <joint name="ArmL6_Elb2" class="Elb2"/>
                             <inertial pos="0.0070904 -0.00130312 0.0620849" mass="2.55666" fullinertia="0.0176279 0.0176027 0.00316996 -1.59585e-05 0.000163327 -1.05294e-05"/>
                             <geom pos="-1.90735e-09 1.52588e-08 0.097" quat="0.707107 0 0 -0.707107" material="wrist" mesh="wrist"/>
                             <!-- Wri_link is at original Hemisphere_B -->
                             <body name="ArmL7_Wri_link" pos="0 0 0.3164985" quat="0.92388 -1.53817e-14 1.53817e-14 -0.382683">
                               <!-- TODO: These are not modelled correctly! -->
-                              <joint name="ArmL7_Wri1_joint" class="Wrist1_joint"/>
-                              <joint name="ArmL7_Wri2_joint" class="Wrist2_joint"/>
+                              <joint name="ArmL7_Wri1" class="Wrist1"/>
+                              <joint name="ArmL7_Wri2" class="Wrist2"/>
                               <geom pos="0 0 0.02409" quat="0.707107 -1.05367e-08 -1.05367e-08 0.707107" material="handadapter" mesh="handadapter"/>
 
                               <!-- Palm_link starts after the adapter -->
@@ -277,50 +277,50 @@
                                 <!-- TODO: Iertial might be assigned to the wrong body -->
                                 <inertial pos="0.0707636 -0.000718432 0.0032602" mass="0.56415" fullinertia="0.000419322 0.00135921 0.00101975 -5.52615e-05 -6.30161e-05 -2.82489e-05"/>
                                 <body name="ThumbL1_link" pos="0.0392901 -0.0148406 0.0327256" quat="0.5 0.5 0.5 0.5">
-                                  <joint name="ThumbL1_joint" axis="0 0 1" class="Thumb1_joint"/>
+                                  <joint name="ThumbL1" axis="0 0 1" class="Thumb1"/>
                                   <geom quat="0 0 1 0" material="armar-7_thumb_basis_right" mesh="armar-7_thumb_basis_right"/>
                                   <body name="ThumbL2_link" pos="0 0.024 6.10352e-08" quat="-5.37505e-15 0.991445 2.4804e-15 0.130526">
-                                    <joint name="ThumbL2_joint" class="Thumb2_joint"/>
+                                    <joint name="ThumbL2" class="Thumb2"/>
                                     <geom quat="0 0 1 0" material="armar-7_thumb_proximal" mesh="armar-7_thumb_proximal"/>
                                     <body name="ThumbL3_link" pos="0 -0.0327 0" quat="1 0 0 0">
-                                      <joint name="ThumbL3_joint" class="Thumb3_joint"/>
+                                      <joint name="ThumbL3" class="Thumb3"/>
                                       <!-- <body name="Thumb L Tip" pos="0 -0.0332 -0.00316669" quat="1 0 0 0"/> -->
                                       <geom quat="0 0 1 0" material="armar-7_thumb_distal" mesh="armar-7_thumb_distal"/>
                                     </body>
                                   </body>
                                 </body>
                                 <body name="IndexL1_link" pos="0.11544 0.00335938 0.0307256" quat="0.512917 -0.512917 0.48674 0.48674">
-                                  <joint name="IndexL1_joint" class="Index1_joint"/>
+                                  <joint name="IndexL1" class="Index1"/>
                                   <geom material="armar-7_index_proximal_phalanx" mesh="armar-7_index_proximal_phalanx"/>
                                   <body name="IndexL2_link" pos="0 -0.0302901 1.90735e-09" quat="1 0 0 0">
-                                    <joint name="IndexL2_joint" class="Index2_joint"/>
+                                    <joint name="IndexL2" class="Index2"/>
                                     <!-- <body name="Index L Tip" pos="0 -0.056037 -0.00806739" quat="1 0 0 0"/> -->
                                     <geom material="armar-7_index_intermediate_distal_phalanx" mesh="armar-7_index_intermediate_distal_phalanx"/>
                                   </body>
                                 </body>
                                 <body name="MiddleL1_link" pos="0.11754 0.00585938 0.00682562" quat="0.5 -0.5 0.5 0.5">
-                                  <joint name="MiddleL1_joint" class="Middle1_joint"/>
+                                  <joint name="MiddleL1" class="Middle1"/>
                                   <geom material="armar-7_middle_proximal_phalanx" mesh="armar-7_middle_proximal_phalanx"/>
                                   <body name="MiddleL2_link" pos="0 -0.0352 0" quat="1 0 0 0">
-                                    <joint name="MiddleL2_joint" class="Middle2_joint"/>
+                                    <joint name="MiddleL2" class="Middle2"/>
                                     <!-- <body name="Middle L Tip" pos="-1.52588e-08 -0.0626449 -0.0085462" quat="1 0 0 0"/> -->
                                     <geom material="armar-7_middle_intermediate_distal_phalanx" mesh="armar-7_middle_intermediate_distal_phalanx"/>
                                   </body>
                                 </body>
                                 <body name="RingL1_link" pos="0.11474 0.00485938 -0.0168744" quat="0.477715 -0.477714 0.521334 0.521334">
-                                  <joint name="RingL1_joint" class="Ring1_joint"/>
+                                  <joint name="RingL1" class="Ring1"/>
                                   <geom material="armar-7_ring_proximal_phalanx" mesh="armar-7_ring_proximal_phalanx"/>
                                   <body name="RingL2_link" pos="0 -0.0320701 -1.90735e-09" quat="1 0 0 0">
                                     <geom material="armar-7_ring_intermediate_distal_phalanx" mesh="armar-7_ring_intermediate_distal_phalanx"/>
-                                    <joint name="RingL2_joint" class="Ring2_joint"/>
+                                    <joint name="RingL2" class="Ring2"/>
                                     <!-- <body name="Ring L Tip" pos="0 -0.0611187 -0.00859279" quat="1 0 0 0"/> -->
                                   </body>
                                 </body>
                                 <body name="PinkyL1_link" pos="0.10644 0.00185938 -0.0382744" quat="0.44739 -0.44739 0.547578 0.547578">
-                                  <joint name="PinkyL1_joint" class="Pinky1_joint"/>
+                                  <joint name="PinkyL1" class="Pinky1"/>
                                   <geom material="armar-7_little_proximal_phalanx" mesh="armar-7_little_proximal_phalanx"/>
                                   <body name="PinkyL2_link" pos="-2.28882e-08 -0.02436 -1.90735e-09" quat="1 0 0 0">
-                                    <joint name="PinkyL2_joint" class="Pinky2_joint"/>
+                                    <joint name="PinkyL2" class="Pinky2"/>
                                     <!-- <body name="Pinky L Tip" pos="-7.62939e-09 -0.0486934 -0.00757046" quat="1 0 0 0"/> -->
                                     <geom material="armar-7_little_intermediate_distal_phalanx" mesh="armar-7_little_intermediate_distal_phalanx"/>
                                   </body>
@@ -338,28 +338,28 @@
                   </body>
                 </body>
                 <body name="ArmR1_Cla1_link" pos="0.0585 0 0" quat="0.707107 0 0 -0.707107">
-                  <joint name="ArmR1_Cla1_joint" class="Cla1_joint"/>
+                  <joint name="ArmR1_Cla1" class="Cla1"/>
                   <inertial pos="5.6346e-06 -0.0387424 -0.000277335" mass="1.76582" fullinertia="0.0040529 0.00302597 0.00356974 5.65332e-06 -2.16909e-06 4.84261e-05"/>
                   <geom quat="0 0 0 1" material="cla1_sho1_exo" mesh="cla1_sho1_exo"/>
                   <body name="ArmR2_Sho1_link" pos="-5.82077e-14 0 0" quat="0.707107 -0.707107 -4.71165e-15 -4.81587e-15">
-                    <joint name="ArmR2_Sho1_joint" class="Sho1_joint"/>
+                    <joint name="ArmR2_Sho1" class="Sho1"/>
                     <inertial pos="-0.0231626 0.00250648 0.0350573" mass="2.56151" fullinertia="0.00270724 0.00375814 0.00327077 1.09109e-06 0.000166031 5.3142e-05"/>
                     <geom pos="0 0 0.088" quat="4.37114e-08 -6.86686e-16 0 1" material="sho1_sho2_exo" mesh="sho1_sho2_exo"/>
                     <body name="ArmR3_Sho2_link" pos="-5.82077e-14 0 0.156" quat="0.5 0.5 0.5 0.5">
-                      <joint name="ArmR3_Sho2_joint" class="Sho2_joint"/>
+                      <joint name="ArmR3_Sho2" class="Sho2"/>
                       <inertial pos="0.0712559 -0.0132075 -0.0374064" mass="1.55209" fullinertia="0.00688435 0.0137648 0.0109076 0.000103523 0.000658886 -4.66134e-06"/>
                       <!-- <geom type="mesh" pos="0 0 -2.91038e-14" quat="1 0 0 0" mesh="arm_sho2_ex" class="collision"/> -->
                       <geom pos="0 0 -2.91038e-14" quat="1 0 0 0" mesh="arm_sho2_ex_0" material="arm_sho2_ex_0"/>
                       <geom pos="0 0 -2.91038e-14" quat="1 0 0 0" mesh="arm_sho2_ex_1" material="arm_sho2_ex_1"/>
                       <body name="ArmR4_Sho3_link" pos="0 0 -2.91038e-14" quat="0.5 0.5 0.5 0.5">
-                        <joint name="ArmR4_Sho3_joint" class="Sho3_joint"/>
+                        <joint name="ArmR4_Sho3" class="Sho3"/>
                         <inertial pos="0.0116919 -0.0176019 0.105774" mass="3.33056" fullinertia="0.0111096 0.0110486 0.00419413 0.000456347 -0.000912162 0.00204211"/>
                         <!-- <geom pos="0 0 0.185" quat="1 0 0 0" mesh="right_arm_sho3" class="collision"/> -->
                         <geom pos="0 0 0.185" quat="1 0 0 0" mesh="right_arm_sho3_0" material="right_arm_sho3_0"/>
                         <geom pos="0 0 0.185" quat="1 0 0 0" mesh="right_arm_sho3_1" material="right_arm_sho3_1"/>
                         <geom pos="0 0 0.185" quat="1 0 0 0" mesh="right_arm_sho3_2" material="right_arm_sho3_2"/>
                         <body name="ArmR5_Elb1_link" pos="0 -0.025 0.3516" quat="0.5 0.5 0.5 0.5">
-                          <joint name="ArmR5_Elb1_joint" class="Elb1_joint"/>
+                          <joint name="ArmR5_Elb1" class="Elb1"/>
                           <inertial pos="-0.0162508 -0.0785547 -0.0285384" mass="0.323242" fullinertia="0.00152013 0.00138165 0.000803862 -4.56548e-05 -2.3935e-06 -4.46932e-05"/>
                           <!-- <geom type="mesh" pos="0 0 0.01" quat="-4.37114e-08 -6.71638e-17 0 1" mesh="elbow1_right" class="collision"/> -->
                           <geom pos="0 0 0.01" quat="-4.37114e-08 -6.71638e-17 0 1" mesh="elbow1_right_0" material="elbow1_right_0"/>
@@ -367,63 +367,63 @@
                           <geom pos="0 0 0.01" quat="-4.37114e-08 -6.71638e-17 0 1" mesh="elbow1_right_2" material="elbow1_right_2"/>
                           <geom pos="0 0 0.01" quat="-4.37114e-08 -6.71638e-17 0 1" mesh="elbow1_right_3" material="elbow1_right_3"/>
                           <body name="ArmR6_Elb2_link" pos="0 0 0.01" quat="-0.5 0.5 0.5 0.5">
-                            <joint name="ArmR6_Elb2_joint" class="Elb2_joint"/>
+                            <joint name="ArmR6_Elb2" class="Elb2"/>
                             <inertial pos="0.00175212 0.00590406 0.102085" mass="1.63194" fullinertia="0.0176279 0.0176027 0.00316996 -1.59585e-05 -0.000163327 1.05294e-05"/>
                             <geom pos="-1.52588e-08 0 0.0969999" quat="1 0 0 0" material="wrist" mesh="wrist"/>
                             <!-- Wri_link is at original Hemisphere_B -->
                             <body name="ArmR7_Wri_link" pos="0 0 0.3164985" quat="0.92388 0 1.53817e-14 0.382683">
                               <!-- TODO: These are not modeled correctly! -->
-                              <joint name="ArmR7_Wri1_joint" class="Wrist1_joint"/>
-                              <joint name="ArmR7_Wri2_joint" class="Wrist2_joint"/>
+                              <joint name="ArmR7_Wri1" class="Wrist1"/>
+                              <joint name="ArmR7_Wri2" class="Wrist2"/>
                               <geom pos="0 0 0.02409" quat="0.707107 -1.05367e-08 -1.05367e-08 0.707107" material="handadapter" mesh="handadapter"/>
                               <!-- Palm_link starts after the adapter -->
                               <body name="HandR_Palm_link" pos="0 0 0.02409" quat="0.653281 -0.270598 -0.653282 -0.270598">
                                 <geom material="armar-7_palm_right" mesh="armar-7_palm_right"/>
                                 <body name="ThumbR1_link" pos="0.03929 -0.0148406 -0.0327256" quat="-0.5 0.5 -0.5 0.5">
-                                  <joint name="ThumbR1_joint" axis="0 0 -1" class="Thumb1_joint"/>
+                                  <joint name="ThumbR1" axis="0 0 -1" class="Thumb1"/>
                                   <geom quat="0 0 1 0" material="armar-7_thumb_basis_right" mesh="armar-7_thumb_basis_right"/>
                                   <body name="ThumbR2_link" pos="0 0.024 0" quat="1.945e-09 0.991445 -2.5606e-10 -0.130526">
-                                    <joint name="ThumbR2_joint" class="Thumb2_joint"/>
+                                    <joint name="ThumbR2" class="Thumb2"/>
                                     <geom quat="0 0 1 0" material="armar-7_thumb_proximal" mesh="armar-7_thumb_proximal"/>
                                     <body name="ThumbR3_link" pos="0 -0.0327 0" quat="1 0 0 0">
-                                      <joint name="ThumbR3_joint" class="Thumb3_joint"/>
+                                      <joint name="ThumbR3" class="Thumb3"/>
                                       <!-- <body name="Thumb R Tip" pos="-1.52588e-08 -0.0332 -0.00316669" quat="1 0 0 0"/> -->
                                       <geom quat="0 0 1 0" material="armar-7_thumb_distal" mesh="armar-7_thumb_distal"/>
                                     </body>
                                   </body>
                                 </body>
                                 <body name="IndexR1_link" pos="0.11544 0.00335938 -0.0307256" quat="0.48674 -0.48674 0.512917 0.512917">
-                                  <joint name="IndexR1_joint" class="Index1_joint"/>
+                                  <joint name="IndexR1" class="Index1"/>
                                   <geom material="armar-7_index_proximal_phalanx" mesh="armar-7_index_proximal_phalanx"/>
                                   <body name="IndexR2_link" pos="0 -0.0302901 0" quat="1 0 0 0">
-                                    <joint name="IndexR2_joint" class="Index2_joint"/>
+                                    <joint name="IndexR2" class="Index2"/>
                                     <!-- <body name="Index R Tip" pos="-3.05176e-08 -0.056037 -0.00806739" quat="1 0 0 0"/> -->
                                     <geom material="armar-7_index_intermediate_distal_phalanx" mesh="armar-7_index_intermediate_distal_phalanx"/>
                                   </body>
                                 </body>
                                 <body name="MiddleR1_link" pos="0.11754 0.00585938 -0.00682562" quat="0.5 -0.5 0.5 0.5">
-                                  <joint name="MiddleR1_joint" class="Middle1_joint"/>
+                                  <joint name="MiddleR1" class="Middle1"/>
                                   <geom material="armar-7_middle_proximal_phalanx" mesh="armar-7_middle_proximal_phalanx"/>
                                   <body name="MiddleR2_link" pos="0 -0.0352 1.90735e-09" quat="1 0 0 0">
-                                    <joint name="MiddleR2_joint" class="Middle2_joint"/>
+                                    <joint name="MiddleR2" class="Middle2"/>
                                     <!-- <body name="Middle R Tip" pos="0 -0.0626448 -0.0085462" quat="1 0 0 0"/> -->
                                     <geom material="armar-7_middle_intermediate_distal_phalanx" mesh="armar-7_middle_intermediate_distal_phalanx"/>
                                   </body>
                                 </body>
                                 <body name="RingR1_link" pos="0.11474 0.00485938 0.0168744" quat="0.521334 -0.521334 0.477714 0.477715">
-                                  <joint name="RingR1_joint" class="Ring1_joint"/>
+                                  <joint name="RingR1" class="Ring1"/>
                                   <geom material="armar-7_ring_proximal_phalanx" mesh="armar-7_ring_proximal_phalanx"/>
                                   <body name="RingR2_link" pos="0 -0.0320701 0" quat="1 0 0 0">
-                                    <joint name="RingR2_joint" class="Ring2_joint"/>
+                                    <joint name="RingR2" class="Ring2"/>
                                     <!-- <body name="Ring R Tip" pos="-1.52588e-08 -0.0611187 -0.00859279" quat="1 0 0 0"/> -->
                                     <geom material="armar-7_ring_intermediate_distal_phalanx" mesh="armar-7_ring_intermediate_distal_phalanx"/>
                                   </body>
                                 </body>
                                 <body name="PinkyR1_link" pos="0.10644 0.00185938 0.0382744" quat="0.547578 -0.547578 0.44739 0.44739">
-                                  <joint name="PinkyR1_joint" class="Pinky1_joint"/>
+                                  <joint name="PinkyR1" class="Pinky1"/>
                                   <geom material="armar-7_little_proximal_phalanx" mesh="armar-7_little_proximal_phalanx"/>
                                   <body name="PinkyR2_link" pos="0 -0.02436 0" quat="1 0 0 0">
-                                    <joint name="PinkyR2_joint" class="Pinky2_joint"/>
+                                    <joint name="PinkyR2" class="Pinky2"/>
                                     <!-- <body name="Pinky R Tip" pos="1.52588e-08 -0.0486934 -0.00757046" quat="1 0 0 0"/> -->
                                     <geom material="armar-7_little_intermediate_distal_phalanx" mesh="armar-7_little_intermediate_distal_phalanx"/>
                                   </body>
@@ -617,88 +617,88 @@
 
   <tendon>
     <fixed name="RightHandIndex_tendon">
-      <joint joint="IndexR1_joint" coef="1"/>
-      <joint joint="IndexR2_joint" coef="1"/>
+      <joint joint="IndexR1" coef="1"/>
+      <joint joint="IndexR2" coef="1"/>
     </fixed>
     <fixed name="RightHandMiddle_tendon">
-      <joint joint="MiddleR1_joint" coef="1"/>
-      <joint joint="MiddleR2_joint" coef="1"/>
+      <joint joint="MiddleR1" coef="1"/>
+      <joint joint="MiddleR2" coef="1"/>
     </fixed>
     <fixed name="RightHandRing_tendon">
-      <joint joint="RingR1_joint" coef="1"/>
-      <joint joint="RingR2_joint" coef="1"/>
+      <joint joint="RingR1" coef="1"/>
+      <joint joint="RingR2" coef="1"/>
     </fixed>
     <fixed name="RightHandPinky_tendon">
-      <joint joint="PinkyR1_joint" coef="1"/>
-      <joint joint="PinkyR2_joint" coef="1"/>
+      <joint joint="PinkyR1" coef="1"/>
+      <joint joint="PinkyR2" coef="1"/>
     </fixed>
     <fixed name="RightHandThumbFlexion_tendon">
-      <joint joint="ThumbR2_joint" coef="1"/>
-      <joint joint="ThumbR3_joint" coef="1"/>
+      <joint joint="ThumbR2" coef="1"/>
+      <joint joint="ThumbR3" coef="1"/>
     </fixed>
 
     <fixed name="LeftHandIndex_tendon">
-      <joint joint="IndexL1_joint" coef="1"/>
-      <joint joint="IndexL2_joint" coef="1"/>
+      <joint joint="IndexL1" coef="1"/>
+      <joint joint="IndexL2" coef="1"/>
     </fixed>
     <fixed name="LeftHandMiddle_tendon">
-      <joint joint="MiddleL1_joint" coef="1"/>
-      <joint joint="MiddleL2_joint" coef="1"/>
+      <joint joint="MiddleL1" coef="1"/>
+      <joint joint="MiddleL2" coef="1"/>
     </fixed>
     <fixed name="LeftHandRing_tendon">
-      <joint joint="RingL1_joint" coef="1"/>
-      <joint joint="RingL2_joint" coef="1"/>
+      <joint joint="RingL1" coef="1"/>
+      <joint joint="RingL2" coef="1"/>
     </fixed>
     <fixed name="LeftHandPinky_tendon">
-      <joint joint="PinkyL1_joint" coef="1"/>
-      <joint joint="PinkyL2_joint" coef="1"/>
+      <joint joint="PinkyL1" coef="1"/>
+      <joint joint="PinkyL2" coef="1"/>
     </fixed>
     <fixed name="LeftHandThumbFlexion_tendon">
-      <joint joint="ThumbL2_joint" coef="1"/>
-      <joint joint="ThumbL3_joint" coef="1"/>
+      <joint joint="ThumbL2" coef="1"/>
+      <joint joint="ThumbL3" coef="1"/>
     </fixed>
   </tendon>
 
   <actuator>
-    <motor joint="Platform_x_joint" name="Platform_x_actuator"/>
-    <motor joint="Platform_y_joint" name="Platform_y_actuator"/>
-    <motor joint="Platform_yaw_joint" name="Platform_yaw_actuator"/>
+    <motor joint="Platform_x" name="Platform_x_actuator"/>
+    <motor joint="Platform_y" name="Platform_y_actuator"/>
+    <motor joint="Platform_yaw" name="Platform_yaw_actuator"/>
 
     <!-- TODO: reinclude -->
-    <position joint="Ankle_joint" class="Lowerbody_motor" name="Ankle_joint" kp="1000" kv="100"/>
-    <position joint="Knee_joint" class="Lowerbody_motor" name="Knee_joint" kp="1000" kv="100"/>
-    <position joint="Hip_joint" class="Lowerbody_motor" name="Hip_joint" kp="1000" kv="100"/>
+    <position joint="Ankle" class="Lowerbody_motor" name="Ankle" kp="1000" kv="100"/>
+    <position joint="Knee" class="Lowerbody_motor" name="Knee" kp="1000" kv="100"/>
+    <position joint="Hip" class="Lowerbody_motor" name="Hip" kp="1000" kv="100"/>
 
-    <position joint="Neck_yaw_joint" class="Neck_motor" name="Neck_1_Yaw_actuator" kp="100" kv="10"/>
-    <position joint="Neck_pitch_joint" class="Neck_motor" name="Neck_VirtualPitch_actuator" kp="100" kv="10"/>
+    <position joint="Neck_yaw" class="Neck_motor" name="Neck_1_Yaw_actuator" kp="100" kv="10"/>
+    <position joint="Neck_pitch" class="Neck_motor" name="Neck_VirtualPitch_actuator" kp="100" kv="10"/>
 
-    <position joint="ArmL1_Cla1_joint" class="Cla1_Sho12_motor" name="ArmL1_Cla1_actuator" kp="100" kv="10"/>
-    <position joint="ArmL2_Sho1_joint" class="Cla1_Sho12_motor" name="ArmL2_Sho1_actuator" kp="100" kv="10"/>
-    <position joint="ArmL3_Sho2_joint" class="Cla1_Sho12_motor" name="ArmL3_Sho2_actuator" kp="100" kv="10"/>
-    <position joint="ArmL4_Sho3_joint" class="Sho3_Elb1_motor" name="ArmL4_Sho3_actuator" kp="100" kv="10"/>
-    <position joint="ArmL5_Elb1_joint" class="Sho3_Elb1_motor" name="ArmL5_Elb1_actuator" kp="100" kv="10"/>
-    <position joint="ArmL6_Elb2_joint" class="Elb2_motor" name="ArmL6_Elb2_actuator" kp="100" kv="10"/>
-    <position joint="ArmL7_Wri1_joint" class="Wrist_motor" name="ArmL7_Wri1_actuator" kp="100" kv="10"/>
-    <position joint="ArmL7_Wri2_joint" class="Wrist_motor" name="ArmL7_Wri2_actuator" kp="100" kv="10"/>
+    <position joint="ArmL1_Cla1" class="Cla1_Sho12_motor" name="ArmL1_Cla1_actuator" kp="100" kv="10"/>
+    <position joint="ArmL2_Sho1" class="Cla1_Sho12_motor" name="ArmL2_Sho1_actuator" kp="100" kv="10"/>
+    <position joint="ArmL3_Sho2" class="Cla1_Sho12_motor" name="ArmL3_Sho2_actuator" kp="100" kv="10"/>
+    <position joint="ArmL4_Sho3" class="Sho3_Elb1_motor" name="ArmL4_Sho3_actuator" kp="100" kv="10"/>
+    <position joint="ArmL5_Elb1" class="Sho3_Elb1_motor" name="ArmL5_Elb1_actuator" kp="100" kv="10"/>
+    <position joint="ArmL6_Elb2" class="Elb2_motor" name="ArmL6_Elb2_actuator" kp="100" kv="10"/>
+    <position joint="ArmL7_Wri1" class="Wrist_motor" name="ArmL7_Wri1_actuator" kp="100" kv="10"/>
+    <position joint="ArmL7_Wri2" class="Wrist_motor" name="ArmL7_Wri2_actuator" kp="100" kv="10"/>
 
     <position tendon="LeftHandIndex_tendon" class="Index1_motor" name="LeftHandIndex_actuator" />
     <position tendon="LeftHandMiddle_tendon" class="Middle1_motor" name="LeftHandFingers_actuator" />
     <position tendon="LeftHandThumbFlexion_tendon" class="Thumb2_motor" name="LeftHandThumbFlexion_actuator"/>
-    <position joint="ThumbL1_joint" class="Thumb1_motor" name="LeftHandThumbCircumduction_actuator"/>
+    <position joint="ThumbL1" class="Thumb1_motor" name="LeftHandThumbCircumduction_actuator"/>
 
-    <position joint="ArmR1_Cla1_joint" class="Cla1_Sho12_motor" name="ArmR1_Cla1_actuator" kp="100" kv="10"/>
-    <position joint="ArmR2_Sho1_joint" class="Cla1_Sho12_motor" name="ArmR2_Sho1_actuator" kp="100" kv="10"/>
-    <position joint="ArmR3_Sho2_joint" class="Cla1_Sho12_motor" name="ArmR3_Sho2_actuator" kp="100" kv="10"/>
-    <position joint="ArmR4_Sho3_joint" class="Sho3_Elb1_motor" name="ArmR4_Sho3_actuator" kp="100" kv="10"/>
-    <position joint="ArmR5_Elb1_joint" class="Sho3_Elb1_motor" name="ArmR5_Elb1_actuator" kp="100" kv="10"/>
-    <position joint="ArmR6_Elb2_joint" class="Elb2_motor" name="ArmR6_Elb2_actuator" kp="100" kv="10"/>
-    <position joint="ArmR7_Wri1_joint" class="Wrist_motor" name="ArmR7_Wri1_actuator" kp="100" kv="10"/>
-    <position joint="ArmR7_Wri2_joint" class="Wrist_motor" name="ArmR7_Wri2_actuator" kp="100" kv="10"/>
+    <position joint="ArmR1_Cla1" class="Cla1_Sho12_motor" name="ArmR1_Cla1_actuator" kp="100" kv="10"/>
+    <position joint="ArmR2_Sho1" class="Cla1_Sho12_motor" name="ArmR2_Sho1_actuator" kp="100" kv="10"/>
+    <position joint="ArmR3_Sho2" class="Cla1_Sho12_motor" name="ArmR3_Sho2_actuator" kp="100" kv="10"/>
+    <position joint="ArmR4_Sho3" class="Sho3_Elb1_motor" name="ArmR4_Sho3_actuator" kp="100" kv="10"/>
+    <position joint="ArmR5_Elb1" class="Sho3_Elb1_motor" name="ArmR5_Elb1_actuator" kp="100" kv="10"/>
+    <position joint="ArmR6_Elb2" class="Elb2_motor" name="ArmR6_Elb2_actuator" kp="100" kv="10"/>
+    <position joint="ArmR7_Wri1" class="Wrist_motor" name="ArmR7_Wri1_actuator" kp="100" kv="10"/>
+    <position joint="ArmR7_Wri2" class="Wrist_motor" name="ArmR7_Wri2_actuator" kp="100" kv="10"/>
 
     <position tendon="RightHandIndex_tendon" class="Index1_motor" name="RightHandIndex_actuator"/>
     <position tendon="RightHandMiddle_tendon" class="Middle1_motor" name="RightHandFingers_actuator" />
     <position tendon="RightHandThumbFlexion_tendon" class="Thumb2_motor" name="RightHandThumbFlexion_actuator" />
-    <position joint="ThumbR1_joint" class="Thumb1_motor" name="RightHandThumbCircumduction_actuator"/>
+    <position joint="ThumbR1" class="Thumb1_motor" name="RightHandThumbCircumduction_actuator"/>
   </actuator>
 
   <equality>
