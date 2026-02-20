@@ -2,6 +2,6 @@
 
   <include file="apartment.xml"/>
 
-  <include file="scene_velocity.xml"/>
+  <include file="scene_position.xml"/>
 
 </mujoco>
