@@ -1,0 +1,58 @@
+<mujoco model="FERA">
+  <!--
+    Adding some fluid viscosity to prevent the hanging sphere from jiggling too much.
+  -->
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1=".1 .2 .3" rgb2=".2 .3 .4"/>
+    <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance=".2"/>
+
+    <model name="robot" file="robot.xml"/>
+
+  </asset>
+
+  <visual>
+    <headlight diffuse=".2 .2 .2"/>
+  </visual>
+
+  <default>
+    <geom type="box" friction=".5"/>
+    <default class="wall">
+      <geom rgba=".5 .5 .5 .4"/>
+    </default>
+  </default>
+
+  <worldbody>
+    <light pos="0.4 -.15 .6" dir="-1 .5 -1" diffuse=".7 .7 .7"/>
+    <light pos="-.4 -.15 .6" dir="1 .5 -1" diffuse=".7 .7 .7"/>
+    <geom type="plane" size="3 3 .01" material="grid"/>
+
+    <body name="sliding door" pos="0 0.5 0">
+      <joint name="conveyor" type="slide" damping="100" axis="1 0 0"/>
+      <geom size=".2 .01 .3" pos="0 0 .3"/>
+      <geom size=".01 .031 .04" pos="-.15 -.041 .45"/>
+      <!--<geom size=".01 .08 .031" pos="-.19 0 .03" class="wall"/>
+      <geom size=".01 .08 .031" pos="0  0 .03" class="wall"/>
+      <geom size=".01 .08 .031" pos="0.19 0 .03" class="wall"/>
+      <geom size="0.2 .01 .031" pos="0 -.09 .03" class="wall"/>
+      <geom size="0.2 .01 .031" pos="0 0.09 .03" class="wall"/>-->
+    </body>
+    
+    <body name="frame door" pos="0 0.52 0">
+      <geom size=".01 .01 .29" pos="-.19 0 .3"/>
+      <geom size=".01 .01 .29" pos=".69 0 .3"/>
+      <geom size=".45 .01 .01" pos=".25 0 .6"/>
+    </body>
+
+    <frame pos="0 0 0" euler="0 0 90">
+      <attach model="robot" prefix="robot_" />
+      <!-- ur_shoulder_p : -3.1 (-3?)
+          ur_shoulder_lift: -1.5 -->
+    </frame>
+
+  </worldbody>
+
+  <actuator>
+    <position name="conveyor" joint="conveyor" ctrlrange="0 .5" ctrllimited="true" kp="400"/>
+  </actuator>
+
+</mujoco>
