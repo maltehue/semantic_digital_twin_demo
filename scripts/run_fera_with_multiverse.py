@@ -31,8 +31,8 @@ if __name__ == "__main__":
             "shoulder_lift_position": ["cmd_joint_angular_position"],
             "elbow_position": ["cmd_joint_angular_position"],
             "wrist_1_position": ["cmd_joint_angular_position"],
-            "wrist_1_position": ["cmd_joint_angular_position"],
-            "wrist_1_position": ["cmd_joint_angular_position"],
+            "wrist_2_position": ["cmd_joint_angular_position"],
+            "wrist_3_position": ["cmd_joint_angular_position"],
         },
     }
     world = MJCFParser(scene_path).parse()

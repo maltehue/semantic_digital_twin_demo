@@ -332,4 +332,18 @@
 
     <position name="conveyor" joint="conveyor" ctrlrange="0 .5" ctrllimited="true" kp="400"/>
   </actuator>
+
+  <extension>
+        <plugin plugin="mujoco.multiverse_connector">
+                <instance name="mujoco_client">
+                        <config key="host" value="tcp://127.0.0.1" />
+                        <config key="server_port" value="7000" />
+                        <config key="client_port" value="7500" />
+                        <config key="world_name" value="world" />
+                        <config key="simulation_name" value="scene_simulation" />
+                        <config key="send" value="{'body': ['position', 'quaternion'], 'joint': ['joint_angular_position', 'joint_linear_position', 'joint_angular_velocity', 'joint_linear_velocity', 'joint_force', 'joint_torque']}" />
+                        <config key="receive" value="{'shoulder_pan_position': ['cmd_joint_angular_position'], 'shoulder_lift_position': ['cmd_joint_angular_position'], 'elbow_position': ['cmd_joint_angular_position'], 'wrist_1_position': ['cmd_joint_angular_position'], 'wrist_2_position': ['cmd_joint_angular_position'], 'wrist_3_position': ['cmd_joint_angular_position']}" />
+                </instance>
+        </plugin>
+</extension>
 </mujoco>
