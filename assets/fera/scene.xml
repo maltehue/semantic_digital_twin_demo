@@ -322,7 +322,7 @@
     <position name="conveyor" joint="conveyor" ctrlrange="0 .5" ctrllimited="true" kp="400"/>
   </actuator>
 
-  <!-- <extension>
+  <extension>
         <plugin plugin="mujoco.multiverse_connector">
                 <instance name="mujoco_client">
                         <config key="host" value="tcp://127.0.0.1" />
@@ -334,7 +334,7 @@
                         <config key="receive" value="{'shoulder_pan_position': ['cmd_joint_angular_position'], 'shoulder_lift_position': ['cmd_joint_angular_position'], 'elbow_position': ['cmd_joint_angular_position'], 'wrist_1_position': ['cmd_joint_angular_position'], 'wrist_2_position': ['cmd_joint_angular_position'], 'wrist_3_position': ['cmd_joint_angular_position']}" />
                 </instance>
         </plugin>
-</extension> -->
+</extension>
 
   <worldbody>
     <body name="floor">
