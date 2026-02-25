@@ -23,4 +23,16 @@
     </body>
   </worldbody>
 
+  <extension>
+        <plugin plugin="mujoco.multiverse_connector">
+                <instance name="mujoco_client">
+                        <config key="host" value="tcp://127.0.0.1" />
+                        <config key="server_port" value="7000" />
+                        <config key="client_port" value="7500" />
+                        <config key="world_name" value="world" />
+                        <config key="simulation_name" value="scene_simulation" />
+                        <config key="send" value="{'body': ['position', 'quaternion'], 'joint': ['joint_angular_position', 'joint_linear_position', 'joint_angular_velocity', 'joint_linear_velocity', 'joint_force', 'joint_torque']}" />
+                        <config key="receive" value="{'base_link': ['odometric_velocity'], 'arm_left_1_joint_position': ['cmd_joint_angular_position'], 'arm_left_2_joint_position': ['cmd_joint_angular_position'], 'arm_left_3_joint_position': ['cmd_joint_angular_position'], 'arm_left_4_joint_position': ['cmd_joint_angular_position'], 'arm_left_5_joint_position': ['cmd_joint_angular_position'], 'arm_left_6_joint_position': ['cmd_joint_angular_position'], 'arm_left_7_joint_position': ['cmd_joint_angular_position'], 'arm_right_1_joint_position': ['cmd_joint_angular_position'], 'arm_right_2_joint_position': ['cmd_joint_angular_position'], 'arm_right_3_joint_position': ['cmd_joint_angular_position'], 'arm_right_4_joint_position': ['cmd_joint_angular_position'], 'arm_right_5_joint_position': ['cmd_joint_angular_position'], 'arm_right_6_joint_position': ['cmd_joint_angular_position'], 'arm_right_7_joint_position': ['cmd_joint_angular_position'], 'torso_lift_joint_position': ['cmd_joint_linear_position'], 'head_1_joint_position': ['cmd_joint_angular_position'], 'head_2_joint_position': ['cmd_joint_angular_position'], 'gripper_left_left_finger_joint_position': ['cmd_joint_linear_position'], 'gripper_left_right_finger_joint_position': ['cmd_joint_linear_position'], 'gripper_right_left_finger_joint_position': ['cmd_joint_linear_position'], 'gripper_right_right_finger_joint_position': ['cmd_joint_linear_position']}" />                </instance>
+        </plugin>
+</extension>
 </mujoco>
