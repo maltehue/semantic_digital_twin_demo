@@ -109,7 +109,7 @@
       </default>
 
       <default class="Hand">
-        <joint type="hinge" axis="1 0 0" limited="true" range="0 1.5708" stiffness="0.1" damping="0.01"/>
+        <joint type="hinge" axis="1 0 0" limited="true" range="0 1.5708" stiffness="0.1" damping="0.1"/>
         <default class="Thumb1"> 
         </default>
         <default class="Thumb2"> 
@@ -125,16 +125,16 @@
         <default class="Middle2">
         </default>
         <default class="Ring1">
-          <joint stiffness="0.01" damping="0"/>
+          <joint stiffness="0.01" damping="0.1"/>
         </default>
         <default class="Ring2">
-          <joint stiffness="0" damping="0"/>
+          <joint stiffness="0" damping="0.1"/>
         </default>
         <default class="Pinky1">
-          <joint stiffness="0" damping="0"/>
+          <joint stiffness="0" damping="0.1"/>
         </default>
         <default class="Pinky2">
-          <joint stiffness="0" damping="0"/>
+          <joint stiffness="0" damping="0.1"/>
         </default>
       </default>
 
