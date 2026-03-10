@@ -1,0 +1,7 @@
+<mujoco model="kitchen">
+    <compiler meshdir="mesh"/>
+  <include file="R007.xml"/>
+  <include file="armar7_scene.xml"/>
+  
+
+</mujoco>

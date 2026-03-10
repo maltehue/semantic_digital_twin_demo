@@ -151,7 +151,7 @@
   </default>
 
   <worldbody>
-    <body name="Platform_link" pos="0 0 0" quat="1 0 0 0" childclass="Armar7">
+    <body name="Platform_link" pos="4 9 0" quat="1 0 0 0" childclass="Armar7">
       <inertial pos="-0.0173717 0.15082 -0.0036366" mass="131.746" fullinertia="5.93318 7.99928 6.15192 0.0925544 -0.171718 0.0469724"/>
       <joint name="Platform_x" axis="1 0 0" class="Platform_xy"/>
       <joint name="Platform_y" axis="0 1 0" class="Platform_xy"/>

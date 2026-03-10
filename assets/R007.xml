@@ -1,0 +1,208 @@
+<mujoco model="R007">
+  <compiler angle="radian"/>
+
+  <asset>
+    <mesh name="mobile-fridge__Fridge_handle" content_type="model/obj" file="mobile-fridge__Fridge_handle.obj"/>
+    <mesh name="mobile-fridge__Fridge_door" content_type="model/obj" file="mobile-fridge__Fridge_door.obj"/>
+    <mesh name="mobile-fridge__Cover_back" content_type="model/obj" file="mobile-fridge__Cover_back.obj"/>
+    <mesh name="mobile-fridge__Cover_right" content_type="model/obj" file="mobile-fridge__Cover_right.obj"/>
+    <mesh name="mobile-fridge__Cover_left" content_type="model/obj" file="mobile-fridge__Cover_left.obj"/>
+    <mesh name="mobile-fridge__Cover_front" content_type="model/obj" file="mobile-fridge__Cover_front.obj"/>
+    <mesh name="mobile-fridge__Cabinet_back" content_type="model/obj" file="mobile-fridge__Cabinet_back.obj"/>
+    <mesh name="mobile-fridge__Cabinet_right" content_type="model/obj" file="mobile-fridge__Cabinet_right.obj"/>
+    <mesh name="mobile-fridge__Cabinet_left" content_type="model/obj" file="mobile-fridge__Cabinet_left.obj"/>
+    <mesh name="mobile-fridge__Cabinet_top" content_type="model/obj" file="mobile-fridge__Cabinet_top.obj"/>
+    <mesh name="mobile-fridge__Cabinet_bottom" content_type="model/obj" file="mobile-fridge__Cabinet_bottom.obj"/>
+    <mesh name="mobile-fridge__Cabinet_inner" content_type="model/obj" file="mobile-fridge__Cabinet_inner.obj"/>
+    <mesh name="mobile-fridge__SwingDoor_door" content_type="model/obj" file="mobile-fridge__SwingDoor_door.obj"/>
+    <mesh name="mobile-fridge__SwingDoor_handle" content_type="model/obj" file="mobile-fridge__SwingDoor_handle.obj"/>
+    <mesh name="mobile-dishwasher__Cover_back" content_type="model/obj" file="mobile-dishwasher__Cover_back.obj"/>
+    <mesh name="mobile-dishwasher__Cover_left" content_type="model/obj" file="mobile-dishwasher__Cover_left.obj"/>
+    <mesh name="mobile-dishwasher__Cover_right" content_type="model/obj" file="mobile-dishwasher__Cover_right.obj"/>
+    <mesh name="mobile-dishwasher__Cover_front" content_type="model/obj" file="mobile-dishwasher__Cover_front.obj"/>
+    <mesh name="mobile-dishwasher__Cabinet_back" content_type="model/obj" file="mobile-dishwasher__Cabinet_back.obj"/>
+    <mesh name="mobile-dishwasher__Cabinet_bottom" content_type="model/obj" file="mobile-dishwasher__Cabinet_bottom.obj"/>
+    <mesh name="mobile-dishwasher__Cabinet_left" content_type="model/obj" file="mobile-dishwasher__Cabinet_left.obj"/>
+    <mesh name="mobile-dishwasher__Cabinet_right" content_type="model/obj" file="mobile-dishwasher__Cabinet_right.obj"/>
+    <mesh name="mobile-dishwasher__Cabinet_top" content_type="model/obj" file="mobile-dishwasher__Cabinet_top.obj"/>
+    <mesh name="mobile-dishwasher__Cabinet_interior" content_type="model/obj" file="mobile-dishwasher__Cabinet_interior.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_door" content_type="model/obj" file="mobile-dishwasher__Dishwasher_door.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_handle" content_type="model/obj" file="mobile-dishwasher__Dishwasher_handle.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_cutlery_basket_Basket" content_type="model/obj" file="mobile-dishwasher__Dishwasher_cutlery_basket_Basket.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_cutlery_basket_handle" content_type="model/obj" file="mobile-dishwasher__Dishwasher_cutlery_basket_handle.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_upper_basket_Basket" content_type="model/obj" file="mobile-dishwasher__Dishwasher_upper_basket_Basket.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_upper_basket_handle" content_type="model/obj" file="mobile-dishwasher__Dishwasher_upper_basket_handle.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_upper_basket_divider" content_type="model/obj" file="mobile-dishwasher__Dishwasher_upper_basket_divider.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_lower_basket_Basket" content_type="model/obj" file="mobile-dishwasher__Dishwasher_lower_basket_Basket.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_lower_basket_handle" content_type="model/obj" file="mobile-dishwasher__Dishwasher_lower_basket_handle.obj"/>
+    <mesh name="mobile-dishwasher__Dishwasher_lower_basket_structure" content_type="model/obj" file="mobile-dishwasher__Dishwasher_lower_basket_structure.obj"/>
+    <mesh name="mobile-dishwasher__Drawer_interior" content_type="model/obj" file="mobile-dishwasher__Drawer_interior.obj"/>
+    <mesh name="mobile-dishwasher__Drawer_door" content_type="model/obj" file="mobile-dishwasher__Drawer_door.obj"/>
+    <mesh name="mobile-dishwasher__Drawer_handle" content_type="model/obj" file="mobile-dishwasher__Drawer_handle.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_back" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_back.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_cover" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_cover.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_inner_left_r" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_inner_left_r.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_inner_right_l" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_inner_right_l.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_inner_right_r" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_inner_right_r.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_right" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_right.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_left" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_left.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_inner_left_l" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_inner_left_l.obj"/>
+    <mesh name="mobile-kitchen-counter__Cabinet_bottom" content_type="model/obj" file="mobile-kitchen-counter__Cabinet_bottom.obj"/>
+    <mesh name="mobile-kitchen-counter__Cover_back" content_type="model/obj" file="mobile-kitchen-counter__Cover_back.obj"/>
+    <mesh name="mobile-kitchen-counter__Cover_right" content_type="model/obj" file="mobile-kitchen-counter__Cover_right.obj"/>
+    <mesh name="mobile-kitchen-counter__Cover_left" content_type="model/obj" file="mobile-kitchen-counter__Cover_left.obj"/>
+    <mesh name="mobile-kitchen-counter__Cover_front" content_type="model/obj" file="mobile-kitchen-counter__Cover_front.obj"/>
+    <mesh name="mobile-kitchen-counter__Counter_top" content_type="model/obj" file="mobile-kitchen-counter__Counter_top.obj"/>
+    <mesh name="mobile-kitchen-counter__Sink_water_outlet" content_type="model/obj" file="mobile-kitchen-counter__Sink_water_outlet.obj"/>
+    <mesh name="mobile-kitchen-counter__Sink_water_tab" content_type="model/obj" file="mobile-kitchen-counter__Sink_water_tab.obj"/>
+    <mesh name="mobile-kitchen-counter__Sink_sink" content_type="model/obj" file="mobile-kitchen-counter__Sink_sink.obj"/>
+    <mesh name="mobile-kitchen-counter__SwingDoorRight_door" content_type="model/obj" file="mobile-kitchen-counter__SwingDoorRight_door.obj"/>
+    <mesh name="mobile-kitchen-counter__SwingDoorRight_handle" content_type="model/obj" file="mobile-kitchen-counter__SwingDoorRight_handle.obj"/>
+    <mesh name="mobile-kitchen-counter__SwingDoorMiddle_door" content_type="model/obj" file="mobile-kitchen-counter__SwingDoorMiddle_door.obj"/>
+    <mesh name="mobile-kitchen-counter__SwingDoorMiddle_handle" content_type="model/obj" file="mobile-kitchen-counter__SwingDoorMiddle_handle.obj"/>
+    <mesh name="mobile-kitchen-counter__DrawerRight_door" content_type="model/obj" file="mobile-kitchen-counter__DrawerRight_door.obj"/>
+    <mesh name="mobile-kitchen-counter__DrawerRight_handle" content_type="model/obj" file="mobile-kitchen-counter__DrawerRight_handle.obj"/>
+    <mesh name="mobile-kitchen-counter__DrawerRight_interior" content_type="model/obj" file="mobile-kitchen-counter__DrawerRight_interior.obj"/>
+    <mesh name="mobile-kitchen-counter__DrawerMiddle_door" content_type="model/obj" file="mobile-kitchen-counter__DrawerMiddle_door.obj"/>
+    <mesh name="mobile-kitchen-counter__DrawerMiddle_handle" content_type="model/obj" file="mobile-kitchen-counter__DrawerMiddle_handle.obj"/>
+    <mesh name="mobile-kitchen-counter__DrawerMiddle_interior" content_type="model/obj" file="mobile-kitchen-counter__DrawerMiddle_interior.obj"/>
+    <mesh name="mobile-kitchen-counter__SwingDoorLeft_door" content_type="model/obj" file="mobile-kitchen-counter__SwingDoorLeft_door.obj"/>
+    <mesh name="mobile-kitchen-counter__SwingDoorLeft_handle" content_type="model/obj" file="mobile-kitchen-counter__SwingDoorLeft_handle.obj"/>
+    <mesh name="controltable__controltable" content_type="model/obj" file="controltable__controltable.obj"/>
+    <mesh name="table__table" content_type="model/obj" file="table__table.obj"/>
+    <mesh name="hund-square-table-80x80__hund-square-table-80x80" content_type="model/obj" file="hund-square-table-80x80__hund-square-table-80x80.obj"/>
+  </asset>
+
+  <worldbody>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cover_back"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cover_right"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cover_left"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cover_front"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cabinet_back"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cabinet_right"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cabinet_left"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cabinet_top"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cabinet_bottom"/>
+    <geom pos="5.48 7.62 -0.03" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Cabinet_inner"/>
+    <geom name="mobile-dishwasher__None" pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cover_back"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cover_left"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cover_right"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cover_front"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cabinet_back"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cabinet_bottom"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cabinet_left"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cabinet_right"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cabinet_top"/>
+    <geom pos="5.5 10.08 0" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Cabinet_interior"/>
+    <geom name="mobile-kitchen-counter__None" pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_back"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_cover"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_inner_left_r"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_inner_right_l"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_inner_right_r"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_right"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_left"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_inner_left_l"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cabinet_bottom"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cover_back"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cover_right"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cover_left"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Cover_front"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Counter_top"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Sink_water_outlet"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Sink_water_tab"/>
+    <geom pos="5.8 7.98 0.02" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__Sink_sink"/>
+    <geom pos="1.4 8.25 0" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="controltable__controltable"/>
+    <geom pos="5.25 11.9 -0.07" quat="0 0 0 1" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="table__table"/>
+    <geom pos="1.2 10.89 -0.05" quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hund-square-table-80x80__hund-square-table-80x80"/>
+    <geom pos="1.2 12.38 -0.05" quat="0.707107 0.707107 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="hund-square-table-80x80__hund-square-table-80x80"/>
+    <body name="mobile-fridge__Fridge" pos="5.20806 7.33367 1.15972" quat="0 0 0 1">
+      <inertial pos="0.025026 -0.308998 0.0107926" quat="0.749226 0.66043 0.04909 0.0090687" mass="6" diaginertia="6.35104 6.33581 6.01553"/>
+      <joint name="mobile-fridge__Fridge_joint" pos="0 0 0" axis="0 0 1" range="0 1.7"/>
+      <geom name="mobile-fridge__None" pos="-0.271943 -0.286331 -1.18972" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Fridge_handle"/>
+      <geom pos="-0.271943 -0.286331 -1.18972" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__Fridge_door"/>
+      <geom size="0.01 0.3 0.55" pos="0.016072 -0.286123 -0.105686" type="box"/>
+    </body>
+    <body name="mobile-fridge__SwingDoor" pos="5.20806 7.33367 0.279863" quat="0 0 0 1">
+      <inertial pos="0.025023 -0.190748 0.0838644" quat="0.846809 0.520837 0.0999237 -0.0407224" mass="6" diaginertia="6.14612 6.13492 6.01149"/>
+      <joint name="mobile-fridge__SwingDoor_joint" pos="0 0 0" axis="0 0 1" range="0 1.7"/>
+      <geom pos="-0.271943 -0.286331 -0.309863" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__SwingDoor_door"/>
+      <geom size="0.01 0.3 0.2" pos="0.016053 -0.286123 0.0256714" type="box"/>
+      <geom pos="-0.271943 -0.286331 -0.309863" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-fridge__SwingDoor_handle"/>
+    </body>
+    <body name="mobile-dishwasher__Dishwasher" pos="5.23358 10.08 0.564574" quat="0 0 0 1">
+      <inertial pos="0.0185936 0.00135705 0.511125" quat="0.999886 -0.00153449 0.015019 -6.6602e-06" mass="9" diaginertia="9.82624 9.78354 9.0473"/>
+      <joint name="mobile-dishwasher__Dishwasher_joint" pos="0 0 0" axis="0 1 0" range="0 1.7"/>
+      <geom pos="-0.266425 0 -0.564574" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_door"/>
+      <geom size="0.01 0.3 0.4" pos="0.0190585 -3.09944e-06 0.357161" type="box"/>
+      <geom pos="-0.266425 0 -0.564574" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_handle"/>
+    </body>
+    <body name="mobile-dishwasher__Dishwasher_cutlery_basket" pos="5.50274 10.0813 1.16425" quat="0 0 0 1">
+      <inertial pos="0.126522 -2.15368e-09 -0.00424004" quat="0.491555 0.508304 0.508304 0.491555" mass="4" diaginertia="4.0641 4.0641 4"/>
+      <joint name="mobile-dishwasher__Dishwasher_cutlery_basket_joint" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.5"/>
+      <geom pos="0.0027399 0.00127814 -1.16425" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_cutlery_basket_Basket"/>
+      <geom size="0.025 0.2525 0.265" quat="0.5 0.5 0.5 -0.5" type="box"/>
+      <geom pos="0.0027399 0.00127814 -1.16425" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_cutlery_basket_handle"/>
+    </body>
+    <body name="mobile-dishwasher__Dishwasher_upper_basket" pos="5.50274 10.0813 1.02108" quat="0 0 0 1">
+      <inertial pos="0.116522 -0.0108493 -0.00344066" quat="-0.143344 0.692425 -0.0726783 0.703362" mass="6" diaginertia="6.08535 6.08227 6.00308"/>
+      <joint name="mobile-dishwasher__Dishwasher_upper_basket_joint" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.5"/>
+      <geom pos="0.00274001 0.00127813 -1.02108" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_upper_basket_Basket"/>
+      <geom size="0.0675 0.2525 0.265" quat="0.5 0.5 0.5 -0.5" type="box"/>
+      <geom pos="-0.821665 -0.00127813 -0.250305" quat="0 0.707107 0 0.707107" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_upper_basket_handle"/>
+      <geom pos="0.00274001 0.00127813 -1.02108" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_upper_basket_divider"/>
+    </body>
+    <body name="mobile-dishwasher__Dishwasher_lower_basket" pos="5.50274 10.0813 0.71187" quat="0 0 0 1">
+      <inertial pos="0.166119 -0.000261887 0.10997" quat="0.638772 0.325417 0.340895 0.608165" mass="6" diaginertia="6.12024 6.11943 6.00081"/>
+      <joint name="mobile-dishwasher__Dishwasher_lower_basket_joint" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.5"/>
+      <geom pos="0.00274026 0.00127813 -0.71187" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_lower_basket_Basket"/>
+      <geom size="0.06 0.2525 0.265" quat="0.5 0.5 0.5 -0.5" type="box"/>
+      <geom pos="0.00274026 0.00127813 -0.71187" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_lower_basket_handle"/>
+      <geom pos="0.00274026 0.00127813 -0.71187" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Dishwasher_lower_basket_structure"/>
+    </body>
+    <body name="mobile-dishwasher__Drawer" pos="5.21152 10.08 0.334433" quat="0 0 0 1">
+      <inertial pos="-0.0278238 8.32093e-05 0.0600862" quat="0.626817 0.328924 0.328433 0.625333" mass="6" diaginertia="6.08308 6.07019 6.01289"/>
+      <joint name="mobile-dishwasher__Drawer_joint" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.4"/>
+      <geom pos="-0.288483 2.86102e-06 -0.334433" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Drawer_interior"/>
+      <geom pos="-0.288483 2.86102e-06 -0.334433" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Drawer_door"/>
+      <geom size="0.01 0.3 0.2" type="box"/>
+      <geom pos="-0.288483 2.86102e-06 -0.334433" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-dishwasher__Drawer_handle"/>
+    </body>
+    <body name="mobile-kitchen-counter__SwingDoorRight" pos="5.23291 7.99976 0.426722" quat="0 0 0 1">
+      <inertial pos="0.0263107 -0.305486 0.0591297" quat="0.783854 0.618066 0.059548 -0.00473803" mass="6" diaginertia="6.34587 6.34274 6.00342"/>
+      <joint name="mobile-kitchen-counter__SwingDoorRight_joint" pos="0 0 0" axis="0 0 1" range="0 1.7"/>
+      <geom pos="-0.567087 0.0197562 -0.406722" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__SwingDoorRight_door"/>
+      <geom size="0.01 0.3 0.25" pos="0.0189053 -0.280244 -0.000180364" type="box"/>
+      <geom pos="-0.567087 0.0197562 -0.406722" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__SwingDoorRight_handle"/>
+    </body>
+    <body name="mobile-kitchen-counter__SwingDoorMiddle" pos="5.23291 9.16071 0.426722" quat="0 0 0 1">
+      <inertial pos="0.0263107 0.305642 0.0591296" quat="0.618104 0.783817 0.00483899 -0.0596183" mass="6" diaginertia="6.34604 6.34291 6.00343"/>
+      <joint name="mobile-kitchen-counter__SwingDoorMiddle_joint" pos="0 0 0" axis="0 0 -1" range="0 1.7"/>
+      <geom pos="-0.567087 1.18071 -0.406722" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__SwingDoorMiddle_door"/>
+      <geom size="0.01 0.3 0.25" pos="0.0189055 0.280714 -0.000180721" type="box"/>
+      <geom pos="-0.567087 1.18071 -0.406722" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__SwingDoorMiddle_handle"/>
+    </body>
+    <body name="mobile-kitchen-counter__DrawerRight" pos="5.21401 8.281 0.816042" quat="0 0 0 1">
+      <inertial pos="-0.0258365 -0.000142906 0.0277551" quat="0.583666 0.400294 0.395563 0.585345" mass="7" diaginertia="7.10248 7.09895 7.00353"/>
+      <joint name="mobile-kitchen-counter__DrawerRight_joint" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.4"/>
+      <geom pos="-0.585988 0.301 -0.796042" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__DrawerRight_door"/>
+      <geom size="0.01 0.3 0.125" type="box"/>
+      <geom pos="-0.585988 0.301 -0.796042" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__DrawerRight_handle"/>
+      <geom pos="-0.585988 0.301 -0.796042" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__DrawerRight_interior"/>
+    </body>
+    <body name="mobile-kitchen-counter__DrawerMiddle" pos="5.21401 8.881 0.816041" quat="0 0 0 1">
+      <inertial pos="-0.0355457 -8.33174e-05 0.0214643" quat="0.581224 0.403828 0.399089 0.58295" mass="6" diaginertia="6.09686 6.09356 6.0033"/>
+      <joint name="mobile-kitchen-counter__DrawerMiddle_joint" pos="0 0 0" axis="1 0 0" type="slide" range="0 0.46"/>
+      <geom pos="-0.585989 0.901 -0.796041" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__DrawerMiddle_door"/>
+      <geom size="0.01 0.3 0.125" type="box"/>
+      <geom pos="-0.585989 0.901 -0.796041" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__DrawerMiddle_handle"/>
+      <geom pos="-0.585989 0.901 -0.796041" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__DrawerMiddle_interior"/>
+    </body>
+    <body name="mobile-kitchen-counter__SwingDoorLeft" pos="5.23291 9.75896 0.426722" quat="0 0 0 1">
+      <inertial pos="0.0263103 0.304476 0.210296" quat="0.447629 0.893112 0.00657408 -0.0439958" mass="6" diaginertia="6.5015 6.49869 6.00311"/>
+      <joint name="mobile-kitchen-counter__SwingDoorLeft_joint" pos="0 0 0" axis="0 0 -1" range="0 1.7"/>
+      <geom pos="-0.567087 1.77896 -0.406722" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__SwingDoorLeft_door"/>
+      <geom size="0.01 0.3 0.375" pos="0.0189069 0.278965 0.129819" type="box"/>
+      <geom pos="-0.567087 1.77896 -0.406722" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="mobile-kitchen-counter__SwingDoorLeft_handle"/>
+    </body>
+  </worldbody>
+</mujoco>
